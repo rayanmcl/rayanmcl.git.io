@@ -18,5 +18,10 @@
 			<button type="Submit">Send</button><br>
 		</form>
 	</div>
+	<script>
+		document.getElementById("username").addEventListener("input", () => console.log(document.getElementById("username").value));
+		document.getElementById("email").addEventListener("input", () => console.log(document.getElementById("email").value));
+		document.getElementById("password").addEventListener("input", () => console.log(document.getElementById("password").value));
+	</script>
 </body>
 </html>
