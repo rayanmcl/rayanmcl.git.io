@@ -11,7 +11,7 @@ const templateID = "template_szewk7m";
 emailjs.send(serviceID, templateID, params)
 .then(
     res =>{
-        document.getElementById("name").value = "";
+        document.getElementById("username").value = "";
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
         console.log(res);
