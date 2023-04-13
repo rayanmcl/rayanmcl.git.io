@@ -9,7 +9,7 @@ const serviceID = "service_5q0ccwe";
 const templateID = "template_szewk7m";
 
 emailjs.send(serviceID, templateID, params)
-.then((res) =>{
+.then((res) => {
         document.getElementById("username").value = "";
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
